@@ -1,5 +1,6 @@
 import json
 import requests
+#insert your info here
 API_KEY = None
 PROJECT_TOKEN = None
 RUN_TOKEN = None
@@ -48,15 +49,3 @@ class Data():
             if value['name'].lower() == country.lower():
                 return value
 
-
-data = Data(API_KEY, PROJECT_TOKEN)
-allData = data.getData()
-totalCases = data.getTotalCases()
-totalDeaths = data.getTotalDeaths()
-totalRecovery = data.getTotalRecovery()
-totalCasesInCanada = data.getCountryData('canada')
-print(allData)
-print(totalCases)
-print(totalDeaths)
-print(totalRecovery)
-print(totalCasesInCanada)
